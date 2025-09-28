@@ -37,14 +37,21 @@
       <h2 class="section-title">Featured Products</h2>
 
       <div class="cards">
-        <!-- Card 1 -->
+        <!-- Card 1 with Razorpay button -->
         <article class="card">
           <img src="https://via.placeholder.com/400x260?text=Product+1" alt="Product 1" />
           <div class="card-body">
             <h3>Product One</h3>
             <p class="price">₹499</p>
             <p class="desc">High-quality product with great features. Perfect for daily use.</p>
-            <a href="#" class="btn btn-small">Add to Cart</a>
+
+            <!-- Razorpay Payment Button -->
+            <form>
+              <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                      data-payment_button_id="pl_xxxxxxxx"
+                      async>
+              </script>
+            </form>
           </div>
         </article>
 
@@ -69,8 +76,8 @@
             <a href="#" class="btn btn-small">Add to Cart</a>
           </div>
         </article>
-      </div> <!-- .cards -->
-    </div> <!-- .container -->
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -82,4 +89,4 @@
 
   <script src="app.js"></script>
 </body>
-</html>l
+</html>
