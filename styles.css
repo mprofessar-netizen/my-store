@@ -1,49 +1,69 @@
-/* Reset some defaults */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f8f9fa;
-  color: #333;
-  text-align: center;
+/* ---------- Base ---------- */
+:root{
+  --bg:#f8f9fa;
+  --text:#222;
+  --muted:#666;
+  --accent:#28a745;
+  --accent-dark:#218838;
+  --card-bg:#fff;
+  --container-width:1100px;
+}
+*{box-sizing:border-box}
+body{
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0; color:var(--text); background:var(--bg); -webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--container-width); margin:0 auto; padding:0 18px}
+
+/* ---------- Header ---------- */
+.site-header{background:#111; color:#fff}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-weight:700;font-size:20px}
+.nav a{color:#ddd;text-decoration:none;margin-left:18px;font-size:15px}
+.nav a:hover{color:#fff}
+
+/* ---------- Hero ---------- */
+.hero{padding:46px 0;text-align:center;background:linear-gradient(180deg,#ffffff 0%, #f1f3f5 100%)}
+.hero h1{margin:0;font-size:28px}
+.hero p{color:var(--muted);margin-top:8px}
+
+/* ---------- Buttons ---------- */
+.button-container{margin-top:18px}
+.btn{
+  display:inline-block;padding:12px 28px;border-radius:8px;background:var(--accent);
+  color:#fff;text-decoration:none;font-weight:600;transition:all .18s ease;
+}
+.btn:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-small{padding:8px 16px;font-size:14px;border-radius:6px}
+
+/* ---------- Products ---------- */
+.products{padding:36px 0}
+.section-title{text-align:center;margin-bottom:20px;font-size:22px}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  align-items:start;
 }
 
-/* Header */
-header {
-  background: #222;
-  color: #fff;
-  padding: 15px 0;
-}
+/* card */
+.card{background:var(--card-bg);border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.06);overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;height:auto;display:block}
+.card-body{padding:14px 16px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.card-body h3{margin:0 0 6px 0;font-size:18px}
+.card-body .price{color:var(--accent);font-weight:700;margin-bottom:8px}
+.card-body .desc{color:var(--muted);font-size:14px;margin-bottom:12px}
 
-/* Main Content */
-main {
-  padding: 40px 20px;
-}
+/* ---------- Footer ---------- */
+.site-footer{background:#111;color:#fff;padding:12px 0;text-align:center;margin-top:28px}
 
-/* Button */
-.button-container {
-  margin-top: 20px;
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .cards{grid-template-columns:repeat(2,1fr)}
 }
-
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: #28a745;
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #218838;
-}
-
-/* Footer */
-footer {
-  background: #222;
-  color: #fff;
-  padding: 10px 0;
-  margin-top: 30px;
+@media (max-width:640px){
+  .nav{display:none}
+  .cards{grid-template-columns:1fr}
+  .hero h1{font-size:22px}
+  .btn{width:200px}
 }
