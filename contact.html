@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us - My Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">My Store</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="refund.html">Refund</a>
+        <a href="shipping.html">Shipping</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1>Contact Us</h1>
+
+    <section class="contact-grid">
+      <div class="card">
+        <h2>Customer Support</h2>
+        <p>Email: <a href="mailto:support@mystore.com">support@mystore.com</a></p>
+        <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p>Hours: Mon–Sat 9:00 AM – 6:00 PM</p>
+      </div>
+
+      <div class="card">
+        <h2>Business Address</h2>
+        <p>My Store Pvt Ltd</p>
+        <p>123 Market Road, City, State</p>
+        <p>India</p>
+      </div>
+    </section>
+
+    <section class="card form-card">
+      <h2>Send us a message</h2>
+      <form id="contactForm" action="#" method="POST">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+      <p class="note">* This form is a demo — replace the action with your backend or form service when ready.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 My Store. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="privacy.html">Privacy</a>
+        <a href="refund.html">Refund</a>
+        <a href="shipping.html">Shipping</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
